@@ -5,16 +5,16 @@ describe User do
 		@user = User.new(name: "Lucas Lacerda Gertel", 
 			email: "lucas.gertel@realwebtrade.com.br",
 			password: "foobar",
-			password_confirmation: "password")
+			password_confirmation: "foobar")
 	}
 
 	subject { @user }
 
 	it { should respond_to(:name) }
 	it { should respond_to(:email) }
-	# it { should respond_to(:password_digest) }
-	# it { should respond_to(:password) }
-	# it { should respond_to(:password_confirmation) }
+	it { should respond_to(:password_digest) }
+	it { should respond_to(:password) }
+	it { should respond_to(:password_confirmation) }
 
 	it { should be_valid }
 
